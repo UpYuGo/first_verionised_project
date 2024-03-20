@@ -1,0 +1,97 @@
+/* Universal Selector */
+* {
+    margin: 0; /* Resetting outter spacing */
+    padding: 0; /* Resetting outter spacing */
+}
+
+.body {
+    background: #F0F3FF; /* color of the background*/
+    height: 100vh; /* 100vh covers 100% of the viewed screen on the browser*/
+    display: grid; /* divides the content in equal pieces*/
+    grid-template-columns: repeat(12, 1fr); /* fr = argument, which creates columns of different sizes -> autosized by browser */
+    grid-template-rows: repeat(12, 1fr); /* fr = argument, which creates rows of different sizes -> autosized by browser */
+}
+
+.navbar {
+    grid-column: 1 / span 12; /* navbar in blueviolet */
+    grid-row: 1 / span 1;
+    background-color: #51829B;
+}
+
+.footer{
+    grid-column: 1 / span 12;
+    grid-row: 12 / span 1;
+    background-color: #51829B;
+}
+
+.leftSideBar {
+    background-color: #EADFB4;  
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 10;
+}
+
+.rightSideBar {
+    background-color: #EADFB4;
+    grid-column: 12 / span 1;
+    grid-row: 2 / span 10;
+}
+
+.content {
+    background-color: #9BB0C1;
+    grid-column: 2 / span 10;
+    grid-row: 2 / span 10
+}
+
+/* ** ******* */
+/* Styling the NavBar * */
+/* ********* *** */
+
+.navbar {
+    display: flex; /* =mesh, which allows us to place the content. command that turn a command bar into a flex box / everything inside the flex box can be arranged into fitting into space */
+    justify-content: space-between; /* arrange the content between the flexbox -> x-axis arrangement*/
+    align-items: center; /* vertically centered -> y-axis arrangementabcd1234 */
+    padding: 0 20px; 
+    /* first number (0) is X-Axis and second number (20) is Y-Axis / 0px from the top ,because its already centered. 20px personal space for the sides (left & right). */
+    color: whitesmoke
+}
+/* ** ******* */
+/* Styling the logo * */
+/* ********* *** */
+.logo {
+    font-size: 24px; 
+    font-weight: bold;
+}
+
+/* ** ******* */
+/* Styling the footer * */
+/* ********* *** */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 14px;
+}
+
+/* ** ******* */
+/* Styling the content * */
+/* ********* *** */
+.content {
+    display: flex;      /* setting up the stage*/
+    justify-content: center; /* x position on webpage*/
+    align-items: center; /* y position on webpage*/
+    text-align: left; /* text inside the center is still on left side*/ 
+    padding: 20px; /* content is 20px aways from borders/egdes */
+}
+
+.profil {
+    max-width: 600px; /* set up the space which is used for the section -cannot be bigger than 600px*/
+}
+
+.developer-photo {
+    width: 100%;
+    max-width: 200px; /* pic can be streched*/
+    border-radius: 50%; /* border for the pic -> round corners*/
+    margin-bottom: 20px; /* add spaec below the pix -> clearly seperated from the text */
+}
